@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+/* Card style - this could be done at the main css level since generally speaking, cards are used all over larger apps. This would prevent the possibilty for styles reapeating on a single screen/component*/
+
 ul.cardList {
     list-style-type: none;
     display: flex;
