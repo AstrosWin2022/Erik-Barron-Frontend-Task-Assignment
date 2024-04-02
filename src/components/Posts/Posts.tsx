@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PostItem from "./PostItem";
-import './styles.css'
+import './styles.css';
 import { useStore } from 'react-redux';
 
 const Post = () => {
@@ -10,7 +10,9 @@ const Post = () => {
 
   store.subscribe(() => {
 
-    _setPostData(store.getState());
+    const data = store.getState();
+
+    _setPostData(data);
 
   });
 

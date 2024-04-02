@@ -1,16 +1,18 @@
 
 const reducer = (state: any, action: any) => {
 
-    if (action.type === 'ADD_POST') {        
+    switch (action.type) {
 
-        return {
-            ...state,
-            posts: [...state.posts, action.payload],
-        };       
-        
+        case 'ADD_POST':
+            //console.log(action);
+            return {
+                ...state,
+                posts: [...state.posts, action.payload],
+            };
+        default:
+            return state;
+
     }
-
-    return state;
 };
 
 export default reducer;

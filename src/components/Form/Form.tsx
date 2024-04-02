@@ -15,7 +15,7 @@ const Form = () => {
 
     if (heading.length === 0 || subHeading.length === 0 || summary.length === 0) {
 
-      alert("Please complete the form...");
+      alert("Please complete the form. *All fields are required...");
       return;
 
     };
