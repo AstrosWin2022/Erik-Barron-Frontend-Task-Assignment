@@ -12,13 +12,20 @@ const Form = () => {
   const [summary, setSummary] = useState("");
 
   const submitForm = () => {
+
+    if (heading.length === 0 || subHeading.length === 0 || summary.length === 0) {
+
+      alert("Please complete the form...");
+      return;
+
+    };
+
     store.dispatch({
       type: 'ADD_POST',
       payload: { heading: heading, subHeading: subHeading, summary: summary }
     });
 
   };
-
 
   return (
     <>

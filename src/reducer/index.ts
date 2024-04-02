@@ -1,7 +1,5 @@
-// reducer code
 
 const reducer = (state: any, action: any) => {
-    //console.log(state);
 
     if (action.type === 'ADD_POST') {        
 
@@ -10,11 +8,9 @@ const reducer = (state: any, action: any) => {
             posts: [...state.posts, action.payload],
         };       
         
-
     }
 
     return state;
 };
-
 
 export default reducer;

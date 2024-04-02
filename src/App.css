@@ -42,7 +42,7 @@ fieldset {
 }
 
 .textField {
-  font-family: montserrat, arial, verdana !important;
+  font-family: inherit;
   width: 100%;
   padding: .75rem;
   margin-bottom: .75rem;
@@ -55,11 +55,11 @@ fieldset {
 
 .btn {
   padding: .75rem;
-  margin-bottom: .75rem;  
+  margin-bottom: .75rem;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .btn-green {
