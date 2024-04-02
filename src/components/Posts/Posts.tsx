@@ -16,7 +16,7 @@ const Post = () => {
 
   return (
     <>
-      <ul className="cards" >
+      <ul className="cardList" >
         <>
           {_postData.posts.map((item: any, i: any) => {
             return (
@@ -32,8 +32,8 @@ const Post = () => {
           })}
 
           {_postData.posts.length === 0 && (
-            <li>
-              <h1>Enter a post to start...</h1>
+            <li className="noCards">
+              <div>Enter a post to start...</div>
             </li>
           )}
         </>
