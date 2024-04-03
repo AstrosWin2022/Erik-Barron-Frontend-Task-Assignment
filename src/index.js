@@ -13,10 +13,6 @@ const initialState = {
 
 const store = createStore(reducer, initialState);
 
-// setTimeout(() => {
-//   console.log(store.getState());
-// }, 1500);
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
