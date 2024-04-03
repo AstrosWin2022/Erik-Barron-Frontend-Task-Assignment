@@ -29,6 +29,8 @@ const Form = () => {
 
   const clearPosts = () => {
 
+    if (store.getState().posts.length === 0) return;
+
     _setHeading("");
     _setSubHeading("");
     _setSummary("");
@@ -92,9 +94,7 @@ const Form = () => {
                 submitForm();
               }}
             />
-
           </div>
-
         </fieldset>
       </form>
     </>
