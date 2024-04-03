@@ -27,6 +27,17 @@ const Form = () => {
 
   };
 
+  const clearPosts = () => {
+
+    _setHeading("");
+    _setSubHeading("");
+    _setSummary("");
+
+    store.dispatch({
+      type: 'CLEAR_POSTS'
+    });
+  };
+
   return (
     <>
       <form id="msform">
@@ -63,6 +74,16 @@ const Form = () => {
           />
           <div className="center">
             <input
+              className="btn btn-white"
+              style={{ marginRight: ".75rem" }}
+              type="button"
+              name="Clear"
+              value="Clear"
+              onClick={(e) => {
+                clearPosts();
+              }}
+            />
+            <input
               className="btn btn-green"
               type="button"
               name="Submit"
@@ -71,6 +92,7 @@ const Form = () => {
                 submitForm();
               }}
             />
+
           </div>
 
         </fieldset>
