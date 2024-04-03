@@ -27,7 +27,7 @@ const Form = () => {
 
   };
 
-  const clearPosts = () => {    
+  const resetPosts = () => {    
 
     _setHeading("");
     _setSubHeading("");
@@ -36,7 +36,7 @@ const Form = () => {
     if (store.getState().posts.length === 0) return;
 
     store.dispatch({
-      type: 'CLEAR_POSTS'
+      type: 'RESET_POSTS'
     });
   };
 
@@ -80,9 +80,9 @@ const Form = () => {
               style={{ marginRight: ".75rem" }}
               type="button"
               name="Clear"
-              value="Clear"
+              value="Reset Posts"
               onClick={(e) => {
-                clearPosts();
+                resetPosts();
               }}
             />
             <input

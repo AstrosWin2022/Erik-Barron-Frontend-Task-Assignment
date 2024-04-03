@@ -9,7 +9,7 @@ const reducer = (state: any, action: any) => {
                 ...state,
                 posts: [...state.posts, action.payload],
             };
-        case 'CLEAR_POSTS':
+        case 'RESET_POSTS':
 
             state.posts.splice(0, state.posts.length);
             return state;
