@@ -7,10 +7,15 @@ import { createStore } from 'redux';
 import reducer from './reducer/index';
 
 const initialState = {
-  posts: []
+  posts: [],
+  name: 'Erik Barron'
 };
 
 const store = createStore(reducer, initialState);
+
+// setTimeout(() => {
+//   console.log(store.getState());
+// }, 1500);
 
 ReactDOM.render(
   <React.StrictMode>

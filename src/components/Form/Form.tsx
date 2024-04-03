@@ -7,13 +7,13 @@ const Form = () => {
 
   const store = useStore();
 
-  const [heading, setHeading] = useState("");
-  const [subHeading, setSubHeading] = useState("");
-  const [summary, setSummary] = useState("");
+  const [_heading, _setHeading] = useState("");
+  const [_subHeading, _setSubHeading] = useState("");
+  const [_summary, _setSummary] = useState("");
 
   const submitForm = () => {
 
-    if (heading.length === 0 || subHeading.length === 0 || summary.length === 0) {
+    if (_heading.length === 0 || _subHeading.length === 0 || _summary.length === 0) {
 
       alert("Please complete the form. *All fields are required...");
       return;
@@ -22,8 +22,16 @@ const Form = () => {
 
     store.dispatch({
       type: 'ADD_POST',
-      payload: { heading: heading, subHeading: subHeading, summary: summary }
+      payload: { heading: _heading, subHeading: _subHeading, summary: _summary }
     });
+
+    setTimeout(() => {
+      
+      _setHeading("");
+      _setSubHeading("");
+      _setSummary("");
+
+    }, 200);
 
   };
 
@@ -37,27 +45,27 @@ const Form = () => {
             className="textField"
             type="text"
             name="heading"
-            value={heading}
+            value={_heading}
             onChange={(e) => {
-              setHeading(e.target.value);
+              _setHeading(e.target.value);
             }}
             placeholder="Heading"
           />
           <input
             className="textField"
             type="text" name="pass"
-            value={subHeading}
+            value={_subHeading}
             onChange={(e) => {
-              setSubHeading(e.target.value);
+              _setSubHeading(e.target.value);
             }}
             placeholder="Sub-Heading"
           />
           <textarea
             className="textField"
             rows={5}
-            value={summary}
+            value={_summary}
             onChange={(e) => {
-              setSummary(e.target.value);
+              _setSummary(e.target.value);
             }}
             placeholder="Summary"
           />
