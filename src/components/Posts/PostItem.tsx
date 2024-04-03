@@ -1,21 +1,26 @@
 import React from 'react'
 
-const PostItem = (props: Props) => {
+const PostItem = ({
+    heading = String,
+    subHeading = String,
+    summary = String,
+
+}) => {
 
     return (
         <>
-            <h1>{props.heading}</h1>
-            <h2>{props.subHeading}</h2>
-            <p>{props.summary}</p>
+            <h1>{heading}</h1>
+            <h2>{subHeading}</h2>
+            <p>{summary}</p>
         </>
     );
 
 };
 
-interface Props {
-    heading: string;
-    subHeading: string,
-    summary: string,
-}
+// interface Props {
+//     heading: string;
+//     subHeading: string,
+//     summary: string,
+// }
 
 export default PostItem;
