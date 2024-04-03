@@ -27,13 +27,13 @@ const Form = () => {
 
   };
 
-  const clearPosts = () => {
-
-    if (store.getState().posts.length === 0) return;
+  const clearPosts = () => {    
 
     _setHeading("");
     _setSubHeading("");
     _setSummary("");
+
+    if (store.getState().posts.length === 0) return;
 
     store.dispatch({
       type: 'CLEAR_POSTS'
