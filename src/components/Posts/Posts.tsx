@@ -3,7 +3,7 @@ import PostItem from "./PostItem";
 import './styles.css';
 import { useStore } from 'react-redux';
 
-const Post = () => {
+const Posts = () => {
 
   const store = useStore();
   const [_postData, _setPostData] = useState(store.getState());
@@ -44,4 +44,4 @@ const Post = () => {
   );
 }
 
-export default Post;
+export default Posts;

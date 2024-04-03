@@ -4,7 +4,7 @@ import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import { useState } from 'react';
 
-function App() {
+const App = () => {
 
   const store = useStore();
 
