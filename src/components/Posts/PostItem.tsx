@@ -1,10 +1,9 @@
-import React from 'react'
+//import React from 'react'
 
 const PostItem = ({
     heading = String,
     subHeading = String,
     summary = String,
-
 }) => {
 
     return (
@@ -16,6 +15,8 @@ const PostItem = ({
     );
 
 };
+
+//Substituted deconstructed Props object at top
 
 // interface Props {
 //     heading: string;

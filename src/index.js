@@ -11,11 +11,11 @@ const initialState = {
   name: 'Erik Barron'
 };
 
-const store = createStore(reducer, initialState);
+const _store = createStore(reducer, initialState);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={_store}>
       <App />
     </Provider>
   </React.StrictMode>,
