@@ -25,14 +25,6 @@ const Form = () => {
       payload: { heading: _heading, subHeading: _subHeading, summary: _summary }
     });
 
-    setTimeout(() => {
-      
-      _setHeading("");
-      _setSubHeading("");
-      _setSummary("");
-
-    }, 200);
-
   };
 
   return (

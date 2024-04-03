@@ -8,7 +8,7 @@ function App() {
 
   const store = useStore();
 
-  const [_count, _setCount] = useState(store.getState().posts.length);  
+  const [_count, _setCount] = useState(store.getState().posts.length);
 
   store.subscribe(() => {
 
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <h1 className="myName">{store.getState().name} - {_count}</h1>
+      <h1 className="myName">{store.getState().name} - {_count} post{_count !== 1 && "s"}</h1>
       <div className="root">
         <div className="gridContainer">
           <div className="gridPost">
