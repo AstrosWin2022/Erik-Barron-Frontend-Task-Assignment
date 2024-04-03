@@ -28,10 +28,9 @@ const Posts = () => {
                 summary={item.summary}
               />
             </li>
-
           )
         })}
-
+        
         {_postData.posts.length === 0 && (
           <li className="noCards">
             <div>Enter a post to start...</div>

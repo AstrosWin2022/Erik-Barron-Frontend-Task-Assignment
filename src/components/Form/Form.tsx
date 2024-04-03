@@ -27,7 +27,7 @@ const Form = () => {
 
   };
 
-  const resetPosts = () => {    
+  const resetPosts = () => {
 
     _setHeading("");
     _setSubHeading("");
