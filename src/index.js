@@ -4,7 +4,7 @@ import App from './App';
 
 import { Provider } from 'react-redux'
 import { createStore } from 'redux';
-import reducer from './reducer/index';
+import reducer from './reducer/reducers';
 
 const initialState = {
   posts: [],
