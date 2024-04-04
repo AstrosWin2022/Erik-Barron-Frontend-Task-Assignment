@@ -6,20 +6,20 @@ import { useStore } from 'react-redux';
 const Posts = () => {
 
   const _store = useStore();
-  const [_postData, _setPostData] = useState(_store.getState());
+  const [_postData, _setPostData] = useState(_store.getState().posts);
 
   _store.subscribe(() => {
 
-    const data = _store.getState();
+    const _posts = _store.getState().posts;
 
-    _setPostData(data);
+    _setPostData(_posts);
 
   });
 
   return (
     <ul className="cardList" >
       <>
-        {_postData.posts.map((item: any, i: any) => {
+        {_postData && _postData.map((item: any, i: any) => {
           return (
             <li key={i} className="card">
               <PostItem
@@ -31,7 +31,7 @@ const Posts = () => {
           )
         })}
         
-        {_postData.posts.length === 0 && (
+        {_postData.length === 0 && (
           <li className="noCards">
             <div>Enter a post to start...</div>
           </li>

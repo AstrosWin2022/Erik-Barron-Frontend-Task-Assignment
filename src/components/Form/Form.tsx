@@ -22,7 +22,11 @@ const Form = () => {
 
     _store.dispatch({
       type: 'ADD_POST',
-      payload: { heading: _heading, subHeading: _subHeading, summary: _summary }
+      payload: {
+        heading: _heading,
+        subHeading: _subHeading,
+        summary: _summary
+      }
     });
 
   };
